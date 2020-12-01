@@ -23,8 +23,8 @@ decode_Prufer pruferSeq = decode_Prufer' pruferSeq []
                                   (tail pruferSeq') (edges ++ [new_edge pruferSeq' edges])
 
 main :: IO ()
-main = do print ("Program wypisuje zbior krawedzi w drzewie zdefiniowanym przez kod Prufera.")
-          print ("Podaj kod Prufera w postaci listy:")
+main = do print ("Decode Prufer sequence in a form of [1,2,3,...] to a list of edges.")
+          print ("Insert Prufer sequence ina list:")
           n <- readLn
-          print ("Wynik:")
+          print ("Edges:")
           print (decode_Prufer (n :: [Integer]))
